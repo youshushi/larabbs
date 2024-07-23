@@ -5,6 +5,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 /* universal */
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+
 
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
