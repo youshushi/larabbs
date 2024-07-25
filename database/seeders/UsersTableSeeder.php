@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
 
         $user3 = User::findOrFail(3);
         $user3->name = 'mika';
-        $user3->email = 'mika@example.co';
+        $user3->email = 'mika@example.com';
         $user3->save();
     }
 }
