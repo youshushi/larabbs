@@ -13,14 +13,12 @@ class ReplyObserver
     public function creating(Reply $reply)
     {
         $reply->content = clean($reply->content, 'user_topic_body');
-        $reply->topic->reply_count = $reply->topic->replies->count();
-        $reply->topic->save();
-
+        $reply->topic->updateReplyCount();
         $reply->topic->user->notify(new TopicReplied($reply));
     }
 
     public function updating(Reply $reply)
     {
-        //
+        $reply->topic->updateReplyCount();
     }
 }
